@@ -1,0 +1,130 @@
+:root {
+    --primary-light: hsl(236, 72%, 79%);
+    --primary-dark: hsl(237, 63%, 64%);
+    --neutral-light-1: hsl(240, 78%, 98%);
+    --neutral-light-2: hsl(234, 14%, 74%);
+    --neutral: hsl(234, 13%, 49%);
+    --neutral-dark: hsl(232, 13%, 33%);
+
+    --purple-gradient: linear-gradient(
+        130deg,
+        var(--primary-light) 0%,
+        var(--primary-dark) 100%
+    );
+}
+
+.pricing-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    margin: 50px auto;
+    padding: 10px 40px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px var(--neutral-light-1);
+}
+
+.pricing-panel > * {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.pricing-panel--purple {
+    padding: 40px 40px;
+    background-color: var(--primary-light);
+    background-image: var(--purple-gradient);
+}
+
+.pricing-panel__title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--neutral-dark);
+}
+
+.pricing-panel__price {
+    font-size: 5em;
+    font-weight: bold;
+    margin: 25px 0;
+    color: var(--neutral-dark);
+}
+
+.pricing-panel__benefits-ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.pricing-panel__benefit {
+    font-weight: bold;
+    padding: 15px 0;
+    color: var(--neutral-dark);
+    border-bottom: 1px solid var(--neutral-light-2);
+}
+
+.pricing-panel .pricing-panel__benefit:first-of-type {
+    border-top: 1px solid var(--neutral-light-2);
+}
+
+.button {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button--learn-more {
+    font-weight: bold;
+    height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-light);
+    background-image: var(--purple-gradient);
+}
+
+.button--learn-more:hover {
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-light);
+    background-color: transparent;
+    background-image: none;
+}
+
+.pricing-panel--purple .button--learn-more {
+    color: var(--primary-dark);
+    background-color: #fff;
+    background-image: none;
+}
+
+.pricing-panel--purple .button--learn-more:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    background-image: none;
+}
+
+.pricing-panel--purple .pricing-panel__title,
+.pricing-panel--purple .pricing-panel__price,
+.pricing-panel--purple .pricing-panel__benefit {
+    color: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+    .pricing-panel {
+        width: 200px;
+        margin: 20px auto;
+    }
+
+    .pricing-panel__price {
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .pricing-panel {
+        width: 300px;
+    }
+
+    .pricing-panel__price {
+        font-size: 5em;
+    }
+}

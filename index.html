@@ -1,52 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="main.js"></script>
+        <script src="./components/pricing-panel.js"></script>
+        <script src="./components/custom-toggle.js"></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./components/pricing-panel.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./components/custom-toggle.css"
+        />
 
-  Our Pricing
-  Annually
-  Monthly
+        <title>Frontend Mentor | Pricing component with toggle</title>
 
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+                margin: 20px 0;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <p id="size-width" style="position: fixed; top: 0; left: 5px;"></p>
+        <main>
+            <h1>Our Pricing</h1>
+            <div class="switch-container">
+                <p>
+                    Annually
+                    <input
+                        type="checkbox"
+                        id="pricing-toggle"
+                        name="pricing-toggle"
+                        value="Monthly"
+                        onclick="changePriceDisplay()"
+                        checked
+                    />Monthly
+                </p>
+            </div>
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
+            <div id="panel-list" class="panel-list"></div>
 
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by <a href="https://github.com/cagloria">cagloria</a>.
+            </div>
+        </main>
+    </body>
 </html>

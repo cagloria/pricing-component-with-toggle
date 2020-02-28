@@ -1,0 +1,25 @@
+.switch {
+    display: block;
+    width: 60px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.switch input {
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+}
+
+.slider {
+    background-color: #ccc;
+}
+
+.slider::before {
+    width: 26px;
+    height: 26px;
+
+    content: "";
+    background-color: #fff;
+}

@@ -1,0 +1,47 @@
+:root {
+    --primary-light: hsl(236, 72%, 79%);
+    --primary-dark: hsl(237, 63%, 64%);
+    --neutral-light-1: hsl(240, 78%, 98%);
+    --neutral-light-2: hsl(234, 14%, 74%);
+    --neutral: hsl(234, 13%, 49%);
+    --neutral-dark: hsl(232, 13%, 33%);
+}
+
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+
+    margin: 0;
+    background-color: var(--neutral-light-1);
+}
+
+.switch-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.switch-container p {
+    font-size: 1.1em;
+    font-weight: 700;
+
+    color: var(--neutral-light-2);
+}
+
+.panel-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 800;
+    text-align: center;
+
+    color: var(--neutral-dark);
+}
+
+@media only screen and (max-width: 900px) {
+    .panel-list {
+        flex-direction: column;
+    }
+}
