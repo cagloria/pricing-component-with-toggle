@@ -9,20 +9,33 @@
 
 body {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-
     margin: 0;
     background-color: var(--neutral-light-1);
 }
 
+.design {
+    position: fixed;
+    z-index: -1;
+}
+
+.design-top {
+    top: 0;
+    right: 0;
+}
+
+.design-bottom {
+    bottom: 0;
+    left: 0;
+}
+
 .switch-container {
     width: fit-content;
-    margin: 0 auto;
+    margin: 25px auto;
 }
 
 .switch-container p {
     font-size: 1.1em;
     font-weight: 700;
-
     color: var(--neutral-light-2);
 }
 
@@ -36,12 +49,25 @@ h1 {
     font-size: 2em;
     font-weight: 800;
     text-align: center;
-
     color: var(--neutral-dark);
 }
 
 @media only screen and (max-width: 900px) {
     .panel-list {
         flex-direction: column;
+    }
+
+    .design-top {
+        top: -50px;
+        right: -190px;
+    }
+
+    .design-bottom {
+        display: none;
+    }
+
+    .switch-container {
+        width: fit-content;
+        margin: 75px auto;
     }
 }
