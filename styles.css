@@ -50,9 +50,15 @@ h1 {
     font-size: 2em;
     font-weight: 800;
     text-align: center;
-    color: var(--neutral-dark);
+    color: var(--neutral);
 }
 
+.button {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Mobile layout */
 @media only screen and (max-width: 900px) {
     .panel-list {
         flex-direction: column;

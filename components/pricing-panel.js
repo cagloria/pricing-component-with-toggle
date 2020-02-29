@@ -13,14 +13,17 @@ class PricingPanel extends HTMLElement {
 
         this.innerHTML = `
             <p class="pricing-panel__title">${name}</p>
-            <p class="pricing-panel__price">${price}</p>
+            <p class="pricing-panel__price">
+                <span class="pricing-panel__price-dollar">$</span>
+                <span class="pricing-panel__price-numbers">${price}</span>
+            </p>
             <ul class="pricing-panel__benefits-ul">
                 <li class="pricing-panel__benefit">${storage} Storage</li>
                 <li class="pricing-panel__benefit">${userLimit} Users Allowed</li>
                 <li class="pricing-panel__benefit">Send up to ${sendingLimit}</li>
             </ul>
         
-            <button class="button button--learn-more">Learn More</button>
+            <button class="button pricing-panel__button">Learn More</button>
         `;
     }
 }

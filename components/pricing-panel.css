@@ -22,12 +22,6 @@
     text-align: center;
     border-radius: 10px;
     background-color: #fff;
-    box-shadow: 0 0 5px var(--neutral-light-1);
-}
-
-.pricing-panel > * {
-    width: 100%;
-    margin: 20px 0;
 }
 
 .pricing-panel--purple {
@@ -36,20 +30,34 @@
     background-image: var(--purple-gradient);
 }
 
+.pricing-panel > * {
+    width: 100%;
+}
+
 .pricing-panel__title {
     font-size: 1.2em;
     font-weight: 700;
-    color: var(--neutral-dark);
+    color: var(--neutral);
 }
 
 .pricing-panel__price {
-    font-size: 4em;
+    font-size: 4.5em;
     font-weight: bold;
-    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
     color: var(--neutral-dark);
 }
 
+.pricing-panel__price-dollar {
+    font-size: 0.6em;
+    height: fit-content;
+    margin-right: 5px;
+}
+
 .pricing-panel__benefits-ul {
+    margin: 25px 0;
     padding-left: 0;
     list-style-type: none;
 }
@@ -57,22 +65,18 @@
 .pricing-panel__benefit {
     font-weight: bold;
     padding: 15px 0;
-    color: var(--neutral-dark);
-    border-bottom: 1px solid var(--neutral-light-2);
-}
-
-.pricing-panel .pricing-panel__benefit:first-of-type {
+    color: var(--neutral);
     border-top: 1px solid var(--neutral-light-2);
 }
 
-.button {
-    cursor: pointer;
-    transition: 0.2s;
+.pricing-panel .pricing-panel__benefit:last-of-type {
+    border-bottom: 1px solid var(--neutral-light-2);
 }
 
-.button--learn-more {
+.pricing-panel__button {
     font-weight: bold;
-    height: 40px;
+    height: 45px;
+    margin: 10px 0;
     text-transform: uppercase;
     color: #fff;
     border: none;
@@ -81,7 +85,7 @@
     background-image: var(--purple-gradient);
 }
 
-.button--learn-more:hover {
+.pricing-panel__button:hover {
     color: var(--primary-dark);
     border: 1px solid var(--primary-light);
     background-color: transparent;
@@ -94,13 +98,13 @@
     color: #fff;
 }
 
-.pricing-panel--purple .button--learn-more {
+.pricing-panel--purple .pricing-panel__button {
     color: var(--primary-dark);
     background-color: #fff;
     background-image: none;
 }
 
-.pricing-panel--purple .button--learn-more:hover {
+.pricing-panel--purple .pricing-panel__button:hover {
     color: #fff;
     border: 1px solid #fff;
     background-color: transparent;
@@ -113,17 +117,19 @@
     }
 
     .pricing-panel__price {
-        font-size: 4em;
+        font-size: 3.5em;
     }
 }
 
+/* Mobile layout */
 @media only screen and (max-width: 900px) {
     .pricing-panel {
-        width: 300px;
+        width: 250px;
         margin-bottom: 30px;
+        padding: 10px 30px;
     }
 
-    .pricing-panel-container:last-of-type .pricing-panel {
+    .pricing-panel:last-of-type {
         margin-bottom: 0;
     }
 
@@ -131,10 +137,16 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
-}
 
-@media only screen and (max-width: 450px) {
-    .pricing-panel {
-        width: 200px;
+    .pricing-panel__price {
+        font-size: 4em;
+    }
+
+    .pricing-panel__benefits-ul {
+        margin: 20px 0;
+    }
+
+    .pricing-panel__button {
+        margin-bottom: 20px;
     }
 }
