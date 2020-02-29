@@ -18,7 +18,6 @@
     flex-direction: column;
     justify-content: center;
     width: 300px;
-    margin: 50px auto;
     padding: 10px 40px;
     text-align: center;
     border-radius: 10px;
@@ -39,12 +38,12 @@
 
 .pricing-panel__title {
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--neutral-dark);
 }
 
 .pricing-panel__price {
-    font-size: 5em;
+    font-size: 4em;
     font-weight: bold;
     margin: 25px 0;
     color: var(--neutral-dark);
@@ -89,6 +88,12 @@
     background-image: none;
 }
 
+.pricing-panel--purple .pricing-panel__title,
+.pricing-panel--purple .pricing-panel__price,
+.pricing-panel--purple .pricing-panel__benefit {
+    color: #fff;
+}
+
 .pricing-panel--purple .button--learn-more {
     color: var(--primary-dark);
     background-color: #fff;
@@ -102,16 +107,9 @@
     background-image: none;
 }
 
-.pricing-panel--purple .pricing-panel__title,
-.pricing-panel--purple .pricing-panel__price,
-.pricing-panel--purple .pricing-panel__benefit {
-    color: #fff;
-}
-
 @media only screen and (max-width: 1200px) {
     .pricing-panel {
         width: 200px;
-        margin: 20px auto;
     }
 
     .pricing-panel__price {
@@ -122,9 +120,21 @@
 @media only screen and (max-width: 900px) {
     .pricing-panel {
         width: 300px;
+        margin-bottom: 30px;
     }
 
-    .pricing-panel__price {
-        font-size: 5em;
+    .pricing-panel-container:last-of-type .pricing-panel {
+        margin-bottom: 0;
+    }
+
+    .pricing-panel--purple {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .pricing-panel {
+        width: 200px;
     }
 }
