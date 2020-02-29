@@ -34,9 +34,14 @@ body {
 }
 
 .switch-container p {
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: 700;
+    width: 240px;
     color: var(--neutral-light-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* TODO: Line up text and toggle */
 }
 
 .panel-list {

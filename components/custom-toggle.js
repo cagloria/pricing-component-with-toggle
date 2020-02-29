@@ -8,11 +8,9 @@ class CustomToggle extends HTMLElement {
         this.innerHTML = `
             <span class="custom-toggle__slider">
                 <span class="custom-toggle__toggle custom-toggle__toggle--on"></span>
-            </span>
-        `;
+            </span>`;
     }
+    // TODO: Add listener for "enter" key
 }
-
-
 
 customElements.define("custom-toggle", CustomToggle);

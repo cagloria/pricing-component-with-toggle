@@ -1,29 +1,46 @@
+:root {
+    --primary-light: hsl(236, 72%, 79%);
+    --primary-dark: hsl(237, 63%, 64%);
+    --purple-gradient: linear-gradient(
+        130deg,
+        var(--primary-light) 0%,
+        var(--primary-dark) 100%
+    );
+}
+
 .custom-toggle {
     width: fit-content;
     height: fit-content;
+    transition: opacity 0.3s;
 }
 
 .custom-toggle__slider {
     position: relative;
-
     display: inline-block;
-    width: 30px;
-    height: 15px;
-    border: 1px solid black;
-    background-color: gray;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: var(--primary-light);
+    background-image: var(--purple-gradient);
 }
 
 .custom-toggle__toggle {
     position: absolute;
-    top: 0;
-
+    top: 3px;
+    left: 5px;
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 24px;
+    height: 24px;
     transition: 0.3s;
-    background-color: white;
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 .custom-toggle__toggle--on {
-    transform: translateX(15px);
+    transform: translateX(26px);
+}
+
+.custom-toggle:hover, .custom-toggle:focus {
+    cursor: pointer;
+    opacity: 0.5;
 }

@@ -85,7 +85,8 @@
     background-image: var(--purple-gradient);
 }
 
-.pricing-panel__button:hover {
+.pricing-panel__button:hover,
+.pricing-panel__button:focus {
     color: var(--primary-dark);
     border: 1px solid var(--primary-light);
     background-color: transparent;
@@ -104,7 +105,8 @@
     background-image: none;
 }
 
-.pricing-panel--purple .pricing-panel__button:hover {
+.pricing-panel--purple .pricing-panel__button:hover,
+.pricing-panel--purple .pricing-panel__button:focus {
     color: #fff;
     border: 1px solid #fff;
     background-color: transparent;
@@ -148,5 +150,11 @@
 
     .pricing-panel__button {
         margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .pricing-panel {
+        width: 200px;
     }
 }

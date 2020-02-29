@@ -58,7 +58,7 @@ function changePriceDisplay() {
             panelPrice.innerHTML = element.priceYearly;
         }
     });
-    
+
     $toggle.toggleClass("custom-toggle__toggle--on");
     PACKAGES.changeIsMonthly();
 }
@@ -93,6 +93,7 @@ window.onload = function() {
         `<custom-toggle 
             id="monthly-pricing-toggle" 
             class="custom-toggle" 
+            tabindex="0"
             onclick="changePriceDisplay()">
             </custom-toggle>`
     );
