@@ -6,9 +6,13 @@ class CustomToggle extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
-            <input type="checkbox">
+            <span class="custom-toggle__slider">
+                <span class="custom-toggle__toggle custom-toggle__toggle--on"></span>
+            </span>
         `;
     }
 }
+
+
 
 customElements.define("custom-toggle", CustomToggle);

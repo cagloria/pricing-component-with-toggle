@@ -1,6 +1,7 @@
 "use strict";
 
 var PACKAGES = (function() {
+    var isMonthly = true;
     const packages = [
         {
             name: "Basic",
@@ -30,13 +31,20 @@ var PACKAGES = (function() {
     return {
         getPackages: function() {
             return packages;
+        },
+        getIsMonthly: function() {
+            return isMonthly;
+        },
+        changeIsMonthly: function() {
+            isMonthly = !isMonthly;
         }
     };
 })();
 
 function changePriceDisplay() {
-    let isMonthly = document.getElementById("isMonthly-checkbox").checked;
     const packages = PACKAGES.getPackages();
+    const $toggle = $(".custom-toggle__toggle");
+    let isMonthly = !PACKAGES.getIsMonthly();
 
     packages.forEach(element => {
         let index = packages.indexOf(element);
@@ -50,11 +58,15 @@ function changePriceDisplay() {
             panelPrice.innerHTML = element.priceYearly;
         }
     });
+    
+    $toggle.toggleClass("custom-toggle__toggle--on");
+    PACKAGES.changeIsMonthly();
 }
 
 window.onload = function() {
     document.getElementById("size-width").innerHTML = window.innerWidth; // TODO: Remove after testing
     const $panelList = $("#panel-list");
+    const $switchSpan = $("#switch-span");
     const packages = this.PACKAGES.getPackages();
 
     packages.forEach(element => {
@@ -76,6 +88,14 @@ window.onload = function() {
             </pricing-panel>`
         );
     });
+
+    $switchSpan.append(
+        `<custom-toggle 
+            id="monthly-pricing-toggle" 
+            class="custom-toggle" 
+            onclick="changePriceDisplay()">
+            </custom-toggle>`
+    );
 };
 
 // TODO: Remove after testing
