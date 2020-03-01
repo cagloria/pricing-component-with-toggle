@@ -10,8 +10,21 @@
 
 .custom-toggle {
     width: fit-content;
-    height: fit-content;
-    transition: opacity 0.3s;
+    height: 30px;
+    transition: 0.3s;
+    border-radius: 20px;
+    /* TODO: Fix extra color appearing above toggle */
+}
+
+.custom-toggle:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.custom-toggle:focus {
+    outline: none;
+    background-color: var(--primary-dark);
+    box-shadow: 0 0 0 4px var(--primary-dark);
 }
 
 .custom-toggle__slider {
@@ -38,9 +51,4 @@
 
 .custom-toggle__toggle--on {
     transform: translateX(26px);
-}
-
-.custom-toggle:hover, .custom-toggle:focus {
-    cursor: pointer;
-    opacity: 0.5;
 }

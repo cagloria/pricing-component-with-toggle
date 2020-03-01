@@ -44,6 +44,11 @@ body {
     /* TODO: Line up text and toggle */
 }
 
+#switch-span {
+    display: flex;
+    align-items: center;
+}
+
 .panel-list {
     display: flex;
     align-items: center;

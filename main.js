@@ -93,7 +93,6 @@ window.onload = function() {
         `<custom-toggle 
             id="monthly-pricing-toggle" 
             class="custom-toggle" 
-            tabindex="0"
             onclick="changePriceDisplay()">
             </custom-toggle>`
     );

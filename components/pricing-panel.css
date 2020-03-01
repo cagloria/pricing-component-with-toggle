@@ -85,12 +85,16 @@
     background-image: var(--purple-gradient);
 }
 
-.pricing-panel__button:hover,
-.pricing-panel__button:focus {
+.pricing-panel__button:hover {
     color: var(--primary-dark);
     border: 1px solid var(--primary-light);
     background-color: transparent;
     background-image: none;
+}
+
+.pricing-panel__button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--primary-dark);
 }
 
 .pricing-panel--purple .pricing-panel__title,
@@ -105,12 +109,16 @@
     background-image: none;
 }
 
-.pricing-panel--purple .pricing-panel__button:hover,
-.pricing-panel--purple .pricing-panel__button:focus {
+.pricing-panel--purple .pricing-panel__button:hover {
     color: #fff;
     border: 1px solid #fff;
     background-color: transparent;
     background-image: none;
+}
+
+.pricing-panel--purple .pricing-panel__button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--neutral-light-2);
 }
 
 @media only screen and (max-width: 1200px) {
