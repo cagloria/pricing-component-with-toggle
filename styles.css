@@ -5,6 +5,11 @@
     --neutral-light-2: hsl(234, 14%, 74%);
     --neutral: hsl(234, 13%, 49%);
     --neutral-dark: hsl(232, 13%, 33%);
+    --primary-gradient: linear-gradient(
+        130deg,
+        var(--primary-light) 0%,
+        var(--primary-dark) 100%
+    );
 }
 
 body {
@@ -36,15 +41,14 @@ body {
 .switch-container p {
     font-size: 0.9em;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 240px;
     color: var(--neutral-light-2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* TODO: Line up text and toggle */
 }
 
-#switch-span {
+.switch-span {
     display: flex;
     align-items: center;
 }

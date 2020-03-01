@@ -1,19 +1,8 @@
-:root {
-    --primary-light: hsl(236, 72%, 79%);
-    --primary-dark: hsl(237, 63%, 64%);
-    --purple-gradient: linear-gradient(
-        130deg,
-        var(--primary-light) 0%,
-        var(--primary-dark) 100%
-    );
-}
-
 .custom-toggle {
     width: fit-content;
     height: 30px;
     transition: 0.3s;
     border-radius: 20px;
-    /* TODO: Fix extra color appearing above toggle */
 }
 
 .custom-toggle:hover {
@@ -30,11 +19,11 @@
 .custom-toggle__slider {
     position: relative;
     display: inline-block;
-    width: 60px;
+    width: 54px;
     height: 30px;
     border-radius: 20px;
     background-color: var(--primary-light);
-    background-image: var(--purple-gradient);
+    background-image: var(--primary-gradient);
 }
 
 .custom-toggle__toggle {
@@ -50,5 +39,5 @@
 }
 
 .custom-toggle__toggle--on {
-    transform: translateX(26px);
+    transform: translateX(20px);
 }

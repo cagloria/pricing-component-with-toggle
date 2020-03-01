@@ -64,7 +64,6 @@ function changePriceDisplay() {
 }
 
 window.onload = function() {
-    document.getElementById("size-width").innerHTML = window.innerWidth; // TODO: Remove after testing
     const $panelList = $("#panel-list");
     const $switchSpan = $("#switch-span");
     const packages = this.PACKAGES.getPackages();
@@ -97,8 +96,3 @@ window.onload = function() {
             </custom-toggle>`
     );
 };
-
-// TODO: Remove after testing
-window.addEventListener("resize", function() {
-    document.getElementById("size-width").innerHTML = window.innerWidth;
-});
