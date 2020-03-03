@@ -1,0 +1,38 @@
+.custom-toggle {
+    width: fit-content;
+    height: 30px;
+    transition: 0.3s;
+    border-radius: 20px;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    &:focus {
+        outline: none;
+        background-color: var(--primary-dark);
+        box-shadow: 0 0 0 4px var(--primary-dark);
+    }
+    &__slider {
+        position: relative;
+        display: inline-block;
+        width: 54px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: var(--primary-light);
+        background-image: var(--primary-gradient);
+    }
+    &__toggle {
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        transition: 0.3s;
+        border-radius: 50%;
+        background-color: #fff;
+        &--on {
+            transform: translateX(20px);
+        }
+    }
+}

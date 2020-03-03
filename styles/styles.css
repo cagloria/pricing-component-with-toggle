@@ -1,0 +1,135 @@
+:root {
+    --primary-light: hsl(236, 72%, 79%);
+    --primary-dark: hsl(237, 63%, 64%);
+    --neutral-light-1: hsl(240, 78%, 98%);
+    --neutral-light-2: hsl(234, 14%, 74%);
+    --neutral: hsl(234, 13%, 49%);
+    --neutral-dark: hsl(232, 13%, 33%);
+    --primary-gradient: linear-gradient(
+        130deg,
+        var(--primary-light) 0%,
+        var(--primary-dark) 100%
+    );
+}
+
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--neutral-light-1);
+}
+
+.design {
+    position: fixed;
+    z-index: -1;
+}
+
+.design-top {
+    top: 0;
+    right: 0;
+}
+
+.design-bottom {
+    bottom: 0;
+    left: 0;
+}
+
+.switch-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 75px auto;
+}
+
+.switch-container p {
+    font-size: 0.9em;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 240px;
+    color: var(--neutral-light-2);
+}
+
+.switch-span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.panel-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 75px auto;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 800;
+    text-align: center;
+    color: var(--neutral);
+}
+
+.button {
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.attribution {
+    font-size: 11px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.attribution a {
+    color: #3e52a3;
+}
+
+/* Mobile layout */
+@media only screen and (max-width: 900px) {
+    .panel-list {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .design-top {
+        top: -50px;
+        right: -190px;
+    }
+    .design-bottom {
+        display: none;
+    }
+    .switch-container {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 75px auto;
+    }
+    .attribution {
+        width: 310px;
+        margin: 40px auto;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .attribution {
+        width: 260px;
+    }
+}

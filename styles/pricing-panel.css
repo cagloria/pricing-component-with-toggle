@@ -1,18 +1,19 @@
 .pricing-panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 300px;
     padding: 10px 40px;
     text-align: center;
     border-radius: 10px;
     background-color: #fff;
-}
-
-.pricing-panel--purple {
-    padding: 40px 40px;
-    background-color: var(--primary-light);
-    background-image: var(--primary-gradient);
 }
 
 .pricing-panel > * {
@@ -28,8 +29,14 @@
 .pricing-panel__price {
     font-size: 4.5em;
     font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin: 5px 0;
     color: var(--neutral-dark);
@@ -37,6 +44,8 @@
 
 .pricing-panel__price-dollar {
     font-size: 0.6em;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin-right: 5px;
 }
@@ -54,7 +63,7 @@
     border-top: 1px solid var(--neutral-light-2);
 }
 
-.pricing-panel .pricing-panel__benefit:last-of-type {
+.pricing-panel__benefit:last-of-type {
     border-bottom: 1px solid var(--neutral-light-2);
 }
 
@@ -79,7 +88,14 @@
 
 .pricing-panel__button:focus {
     outline: none;
+    -webkit-box-shadow: 0 0 0 4px var(--primary-dark);
     box-shadow: 0 0 0 4px var(--primary-dark);
+}
+
+.pricing-panel--purple {
+    padding: 40px 40px;
+    background-color: var(--primary-light);
+    background-image: var(--primary-gradient);
 }
 
 .pricing-panel--purple .pricing-panel__title,
@@ -103,6 +119,7 @@
 
 .pricing-panel--purple .pricing-panel__button:focus {
     outline: none;
+    -webkit-box-shadow: 0 0 0 4px var(--neutral-light-2);
     box-shadow: 0 0 0 4px var(--neutral-light-2);
 }
 
@@ -110,7 +127,6 @@
     .pricing-panel {
         width: 200px;
     }
-
     .pricing-panel__price {
         font-size: 3.5em;
     }
@@ -123,26 +139,21 @@
         margin-bottom: 30px;
         padding: 10px 30px;
     }
-
     .pricing-panel:last-of-type {
         margin-bottom: 0;
     }
-
-    .pricing-panel--purple {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
     .pricing-panel__price {
         font-size: 4em;
     }
-
     .pricing-panel__benefits-ul {
         margin: 20px 0;
     }
-
     .pricing-panel__button {
         margin-bottom: 20px;
+    }
+    .pricing-panel--purple {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 

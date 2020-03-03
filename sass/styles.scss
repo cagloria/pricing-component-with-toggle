@@ -36,16 +36,15 @@ body {
 .switch-container {
     width: fit-content;
     margin: 75px auto;
-}
-
-.switch-container p {
-    font-size: 0.9em;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 240px;
-    color: var(--neutral-light-2);
+    p {
+        font-size: 0.9em;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 240px;
+        color: var(--neutral-light-2);
+    }
 }
 
 .switch-span {
@@ -69,7 +68,16 @@ h1 {
 
 .button {
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
+}
+
+.attribution {
+    font-size: 11px;
+    margin: 40px 0;
+    text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
 }
 
 /* Mobile layout */
@@ -90,5 +98,16 @@ h1 {
     .switch-container {
         width: fit-content;
         margin: 75px auto;
+    }
+
+    .attribution {
+        width: 310px;
+        margin: 40px auto;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .attribution {
+        width: 260px;
     }
 }
