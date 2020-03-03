@@ -1,5 +1,3 @@
-"use strict";
-
 var PACKAGES = (function() {
     var isMonthly = true;
     const packages = [
