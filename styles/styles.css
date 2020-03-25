@@ -182,7 +182,6 @@
   }
 }
 
-/* Mobile layout */
 @media only screen and (max-width: 900px) {
   .pricing-panel {
     width: 250px;
@@ -224,14 +223,16 @@ body {
   z-index: -1;
 }
 
-.design-top {
+.design--top {
   top: 0;
   right: 0;
+  content: url("../images/bg-top.svg");
 }
 
-.design-bottom {
+.design--bottom {
   bottom: 0;
   left: 0;
+  content: url("../images/bg-bottom.svg");
 }
 
 .switch-container {
@@ -294,12 +295,12 @@ h1 {
 
 .attribution {
   font-size: 11px;
-  margin: 40px 0;
+  margin: 40px;
   text-align: center;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #494c5f;
 }
 
 @media only screen and (max-width: 900px) {
@@ -309,11 +310,11 @@ h1 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .design-top {
+  .design--top {
     top: -50px;
     right: -190px;
   }
-  .design-bottom {
+  .design--bottom {
     display: none;
   }
   .switch-container {
@@ -321,15 +322,5 @@ h1 {
     width: -moz-fit-content;
     width: fit-content;
     margin: 75px auto;
-  }
-  .attribution {
-    width: 310px;
-    margin: 40px auto;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .attribution {
-    width: 260px;
   }
 }

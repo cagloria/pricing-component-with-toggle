@@ -18,16 +18,17 @@ body {
 .design {
     position: fixed;
     z-index: -1;
-}
+    &--top {
+        top: 0;
+        right: 0;
+        content: url("../images/bg-top.svg");
+    }
 
-.design-top {
-    top: 0;
-    right: 0;
-}
-
-.design-bottom {
-    bottom: 0;
-    left: 0;
+    &--bottom {
+        bottom: 0;
+        left: 0;
+        content: url("../images/bg-bottom.svg");
+    }
 }
 
 .switch-container {
@@ -70,10 +71,10 @@ h1 {
 
 .attribution {
     font-size: 11px;
-    margin: 40px 0;
+    margin: 40px;
     text-align: center;
     a {
-        color: hsl(228, 45%, 44%);
+        color: $dark;
     }
 }
 
@@ -82,28 +83,19 @@ h1 {
         flex-direction: column;
     }
 
-    .design-top {
-        top: -50px;
-        right: -190px;
-    }
+    .design {
+        &--top {
+            top: -50px;
+            right: -190px;
+        }
 
-    .design-bottom {
-        display: none;
+        &--bottom {
+            display: none;
+        }
     }
 
     .switch-container {
         width: fit-content;
         margin: 75px auto;
-    }
-
-    .attribution {
-        width: 310px;
-        margin: 40px auto;
-    }
-}
-
-@media only screen and (max-width: 350px) {
-    .attribution {
-        width: 260px;
     }
 }
