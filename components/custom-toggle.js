@@ -1,5 +1,3 @@
-"use strict";
-
 class CustomToggle extends HTMLElement {
     constructor() {
         super();

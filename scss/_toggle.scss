@@ -1,3 +1,11 @@
+$primary-light: hsl(236, 72%, 79%);
+$primary-dark: hsl(237, 63%, 64%);
+$primary-gradient: linear-gradient(
+    130deg,
+    $primary-light 0%,
+    $primary-dark 100%
+);
+
 .custom-toggle {
     width: fit-content;
     height: 30px;
@@ -9,8 +17,8 @@
     }
     &:focus {
         outline: none;
-        background-color: var(--primary-dark);
-        box-shadow: 0 0 0 4px var(--primary-dark);
+        background-color: $primary-dark;
+        box-shadow: 0 0 0 4px $primary-dark;
     }
     &__slider {
         position: relative;
@@ -18,8 +26,8 @@
         width: 54px;
         height: 30px;
         border-radius: 20px;
-        background-color: var(--primary-light);
-        background-image: var(--primary-gradient);
+        background-color: $primary-light;
+        background-image: $primary-gradient;
     }
     &__toggle {
         position: absolute;

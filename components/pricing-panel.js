@@ -1,5 +1,3 @@
-"use strict";
-
 class PricingPanel extends HTMLElement {
     constructor() {
         super();

@@ -1,3 +1,14 @@
+$primary-light: hsl(236, 72%, 79%);
+$primary-dark: hsl(237, 63%, 64%);
+$neutral-light-2: hsl(234, 14%, 74%);
+$neutral: hsl(234, 13%, 49%);
+$neutral-dark: hsl(232, 13%, 33%);
+$primary-gradient: linear-gradient(
+    130deg,
+    $primary-light 0%,
+    $primary-dark 100%
+);
+
 .pricing-panel {
     display: flex;
     flex-direction: column;
@@ -14,7 +25,7 @@
     &__title {
         font-size: 1.2em;
         font-weight: 700;
-        color: var(--neutral);
+        color: $neutral;
     }
 
     &__price {
@@ -24,7 +35,7 @@
         align-items: center;
         justify-content: center;
         margin: 5px 0;
-        color: var(--neutral-dark);
+        color: $neutral-dark;
     }
 
     &__price-dollar {
@@ -42,10 +53,10 @@
     &__benefit {
         font-weight: bold;
         padding: 15px 0;
-        color: var(--neutral);
-        border-top: 1px solid var(--neutral-light-2);
+        color: $neutral;
+        border-top: 1px solid $neutral-light-2;
         &:last-of-type {
-            border-bottom: 1px solid var(--neutral-light-2);
+            border-bottom: 1px solid $neutral-light-2;
         }
     }
 
@@ -57,25 +68,25 @@
         color: #fff;
         border: none;
         border-radius: 10px;
-        background-color: var(--primary-light);
-        background-image: var(--primary-gradient);
+        background-color: $primary-light;
+        background-image: $primary-gradient;
         &:hover {
-            color: var(--primary-dark);
-            border: 1px solid var(--primary-light);
+            color: $primary-dark;
+            border: 1px solid $primary-light;
             background-color: transparent;
             background-image: none;
         }
 
         &:focus {
             outline: none;
-            box-shadow: 0 0 0 4px var(--primary-dark);
+            box-shadow: 0 0 0 4px $primary-dark;
         }
     }
 
     &--purple {
         padding: 40px 40px;
-        background-color: var(--primary-light);
-        background-image: var(--primary-gradient);
+        background-color: $primary-light;
+        background-image: $primary-gradient;
         .pricing-panel__title,
         .pricing-panel__price,
         .pricing-panel__benefit {
@@ -83,7 +94,7 @@
         }
 
         .pricing-panel__button {
-            color: var(--primary-dark);
+            color: $primary-dark;
             background-color: #fff;
             background-image: none;
             &:hover {
@@ -95,7 +106,7 @@
 
             &:focus {
                 outline: none;
-                box-shadow: 0 0 0 4px var(--neutral-light-2);
+                box-shadow: 0 0 0 4px $neutral-light-2;
             }
         }
     }

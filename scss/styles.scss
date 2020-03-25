@@ -1,21 +1,22 @@
-:root {
-    --primary-light: hsl(236, 72%, 79%);
-    --primary-dark: hsl(237, 63%, 64%);
-    --neutral-light-1: hsl(240, 78%, 98%);
-    --neutral-light-2: hsl(234, 14%, 74%);
-    --neutral: hsl(234, 13%, 49%);
-    --neutral-dark: hsl(232, 13%, 33%);
-    --primary-gradient: linear-gradient(
-        130deg,
-        var(--primary-light) 0%,
-        var(--primary-dark) 100%
-    );
-}
+@import "toggle";
+@import "panel";
+
+$primary-light: hsl(236, 72%, 79%);
+$primary-dark: hsl(237, 63%, 64%);
+$neutral-light-1: hsl(240, 78%, 98%);
+$neutral-light-2: hsl(234, 14%, 74%);
+$neutral: hsl(234, 13%, 49%);
+$neutral-dark: hsl(232, 13%, 33%);
+$primary-gradient: linear-gradient(
+    130deg,
+    $primary-light 0%,
+    $primary-dark 100%
+);
 
 body {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: var(--neutral-light-1);
+    background-color: $neutral-light-1;
 }
 
 .design {
@@ -43,7 +44,7 @@ body {
         align-items: center;
         justify-content: space-between;
         width: 240px;
-        color: var(--neutral-light-2);
+        color: $neutral-light-2;
     }
 }
 
@@ -63,7 +64,7 @@ h1 {
     font-size: 2em;
     font-weight: 800;
     text-align: center;
-    color: var(--neutral);
+    color: $neutral;
 }
 
 .button {
@@ -80,7 +81,6 @@ h1 {
     }
 }
 
-/* Mobile layout */
 @media only screen and (max-width: 900px) {
     .panel-list {
         flex-direction: column;
