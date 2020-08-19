@@ -22,12 +22,19 @@ body {
         top: 0;
         right: 0;
         content: url("../images/bg-top.svg");
+        @media only screen and (max-width: 900px) {
+            top: -50px;
+            right: -190px;
+        }
     }
 
     &--bottom {
         bottom: 0;
         left: 0;
         content: url("../images/bg-bottom.svg");
+        @media only screen and (max-width: 900px) {
+            display: none;
+        }
     }
 }
 
@@ -43,6 +50,11 @@ body {
         width: 240px;
         color: $light-2;
     }
+
+    @media only screen and (max-width: 900px) {
+        width: fit-content;
+        margin: 75px auto;
+    }
 }
 
 .switch-span {
@@ -55,6 +67,9 @@ body {
     align-items: center;
     justify-content: center;
     margin: 75px auto;
+    @media only screen and (max-width: 900px) {
+        flex-direction: column;
+    }
 }
 
 h1 {
@@ -75,27 +90,5 @@ h1 {
     text-align: center;
     a {
         color: $dark;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .panel-list {
-        flex-direction: column;
-    }
-
-    .design {
-        &--top {
-            top: -50px;
-            right: -190px;
-        }
-
-        &--bottom {
-            display: none;
-        }
-    }
-
-    .switch-container {
-        width: fit-content;
-        margin: 75px auto;
     }
 }

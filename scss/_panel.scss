@@ -32,6 +32,13 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
         justify-content: center;
         margin: 5px 0;
         color: $dark;
+        @media only screen and (max-width: 1200px) {
+            font-size: 3.5em;
+        }
+
+        @media only screen and (max-width: 900px) {
+            font-size: 4em;
+        }
     }
 
     &__price-dollar {
@@ -44,6 +51,9 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
         margin: 25px 0;
         padding-left: 0;
         list-style-type: none;
+        @media only screen and (max-width: 900px) {
+            margin: 20px 0;
+        }
     }
 
     &__benefit {
@@ -77,8 +87,13 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
             outline: none;
             box-shadow: 0 0 0 4px $primary-2;
         }
+
+        @media only screen and (max-width: 900px) {
+            margin-bottom: 20px;
+        }
     }
 
+    // TODO: Set every nth to these styles rather than using a class
     &--purple {
         padding: 40px 40px;
         background-color: $primary-1;
@@ -105,49 +120,27 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
                 box-shadow: 0 0 0 4px $light-2;
             }
         }
-    }
-}
 
-@media only screen and (max-width: 1200px) {
-    .pricing-panel {
-        width: 200px;
-
-        &__price {
-            font-size: 3.5em;
+        @media only screen and (max-width: 900px) {
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
     }
-}
 
-@media only screen and (max-width: 900px) {
-    .pricing-panel {
+    @media only screen and (max-width: 1200px) {
+        width: 200px;
+    }
+
+    @media only screen and (max-width: 900px) {
         width: 250px;
         margin-bottom: 30px;
         padding: 10px 30px;
         &:last-of-type {
             margin-bottom: 0;
         }
-
-        &__price {
-            font-size: 4em;
-        }
-
-        &__benefits-ul {
-            margin: 20px 0;
-        }
-
-        &__button {
-            margin-bottom: 20px;
-        }
-
-        &--purple {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
     }
-}
 
-@media only screen and (max-width: 350px) {
-    .pricing-panel {
+    @media only screen and (max-width: 350px) {
         width: 200px;
     }
 }
