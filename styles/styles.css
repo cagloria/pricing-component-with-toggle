@@ -227,39 +227,23 @@
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   margin: 0;
   background-color: #f6f6fe;
-}
-
-.design {
-  position: fixed;
-  z-index: -1;
-}
-
-.design--top {
-  top: 0;
-  right: 0;
-  content: url("../images/bg-top.svg");
+  background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
 }
 
 @media only screen and (max-width: 900px) {
-  .design--top {
-    top: -50px;
-    right: -190px;
-  }
-}
-
-.design--bottom {
-  bottom: 0;
-  left: 0;
-  content: url("../images/bg-bottom.svg");
-}
-
-@media only screen and (max-width: 900px) {
-  .design--bottom {
-    display: none;
+  body {
+    background-image: url("../images/bg-top.svg");
+    background-position: top -6px right -154px;
   }
 }
 

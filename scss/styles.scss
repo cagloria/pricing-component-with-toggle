@@ -9,32 +9,21 @@ $neutral: hsl(233, 13%, 49%);
 $dark: hsl(232, 13%, 33%);
 $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: $light-1;
-}
-
-.design {
-    position: fixed;
-    z-index: -1;
-    &--top {
-        top: 0;
-        right: 0;
-        content: url("../images/bg-top.svg");
-        @media only screen and (max-width: 900px) {
-            top: -50px;
-            right: -190px;
-        }
-    }
-
-    &--bottom {
-        bottom: 0;
-        left: 0;
-        content: url("../images/bg-bottom.svg");
-        @media only screen and (max-width: 900px) {
-            display: none;
-        }
+    background-image: url("../images/bg-top.svg"),
+        url("../images/bg-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
+    @media only screen and (max-width: 900px) {
+        background-image: url("../images/bg-top.svg");
+        background-position: top -6px right -154px;
     }
 }
 
