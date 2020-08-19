@@ -42,19 +42,15 @@ var PACKAGES = (function () {
 function changePriceDisplay() {
     const packages = PACKAGES.getPackages();
     const $toggle = $(".custom-toggle__toggle");
-    let isMonthly = !PACKAGES.getIsMonthly();
+    const isMonthly = !PACKAGES.getIsMonthly();
 
     packages.forEach((element) => {
-        let index = packages.indexOf(element);
-        let pricingPanel = document.getElementById(`panel-${index}`);
-        let panelPrice = pricingPanel.getElementsByClassName(
-            "pricing-panel__price-numbers"
-        )[0];
-        if (isMonthly) {
-            panelPrice.innerHTML = element.priceMonthly;
-        } else {
-            panelPrice.innerHTML = element.priceYearly;
-        }
+        const index = packages.indexOf(element);
+        const $panelPrice = $(".pricing-panel__price-numbers")[index];
+
+        $panelPrice.innerHTML = isMonthly
+            ? element.priceMonthly
+            : element.priceYearly;
     });
 
     $toggle.toggleClass("custom-toggle__toggle--on");
@@ -67,16 +63,11 @@ window.onload = function () {
     const packages = this.PACKAGES.getPackages();
 
     packages.forEach((element) => {
-        let classMod = "";
         let index = packages.indexOf(element);
-
-        if (index % 2) {
-            classMod = " pricing-panel--purple";
-        }
 
         $panelList.append(`
             <li is="pricing-panel"
-                class="pricing-panel${classMod}"  
+                class="pricing-panel"  
                 id="panel-${index}"
                 data-name="${element.name}" 
                 data-price="${element.priceMonthly}" 

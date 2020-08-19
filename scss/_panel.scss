@@ -93,8 +93,7 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
         }
     }
 
-    // TODO: Set every nth to these styles rather than using a class
-    &--purple {
+    &:nth-of-type(even) {
         padding: 40px 40px;
         background-color: $primary-1;
         background-image: $primary-gradient;

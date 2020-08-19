@@ -2,6 +2,7 @@ class PricingPanel extends HTMLLIElement {
     constructor() {
         super();
     }
+
     connectedCallback() {
         let name = this.dataset.name;
         let price = this.dataset.price;

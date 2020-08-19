@@ -166,39 +166,39 @@
   }
 }
 
-.pricing-panel--purple {
+.pricing-panel:nth-of-type(even) {
   padding: 40px 40px;
   background-color: #a3a8f0;
   background-image: linear-gradient(130deg, #a3a8f0 0%, #696fdd 100%);
 }
 
-.pricing-panel--purple .pricing-panel__title,
-.pricing-panel--purple .pricing-panel__price,
-.pricing-panel--purple .pricing-panel__benefit {
+.pricing-panel:nth-of-type(even) .pricing-panel__title,
+.pricing-panel:nth-of-type(even) .pricing-panel__price,
+.pricing-panel:nth-of-type(even) .pricing-panel__benefit {
   color: #fff;
 }
 
-.pricing-panel--purple .pricing-panel__button {
+.pricing-panel:nth-of-type(even) .pricing-panel__button {
   color: #696fdd;
   background-color: #fff;
   background-image: none;
 }
 
-.pricing-panel--purple .pricing-panel__button:hover {
+.pricing-panel:nth-of-type(even) .pricing-panel__button:hover {
   color: #fff;
   border: 1px solid #fff;
   background-color: transparent;
   background-image: none;
 }
 
-.pricing-panel--purple .pricing-panel__button:focus {
+.pricing-panel:nth-of-type(even) .pricing-panel__button:focus {
   outline: none;
   -webkit-box-shadow: 0 0 0 4px #b3b5c6;
           box-shadow: 0 0 0 4px #b3b5c6;
 }
 
 @media only screen and (max-width: 900px) {
-  .pricing-panel--purple {
+  .pricing-panel:nth-of-type(even) {
     padding-top: 10px;
     padding-bottom: 10px;
   }
