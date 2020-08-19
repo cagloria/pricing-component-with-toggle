@@ -1,13 +1,13 @@
-class PricingPanel extends HTMLElement {
+class PricingPanel extends HTMLLIElement {
     constructor() {
         super();
     }
     connectedCallback() {
-        let name = this.getAttribute("name");
-        let price = this.getAttribute("price");
-        let storage = this.getAttribute("storage");
-        let userLimit = this.getAttribute("user-limit");
-        let sendingLimit = this.getAttribute("sending-limit");
+        let name = this.dataset.name;
+        let price = this.dataset.price;
+        let storage = this.dataset.storage;
+        let userLimit = this.dataset.user;
+        let sendingLimit = this.dataset.sending;
 
         this.innerHTML = `
             <p class="pricing-panel__title">${name}</p>
@@ -17,8 +17,12 @@ class PricingPanel extends HTMLElement {
             </p>
             <ul class="pricing-panel__benefits-ul">
                 <li class="pricing-panel__benefit">${storage} Storage</li>
-                <li class="pricing-panel__benefit">${userLimit} Users Allowed</li>
-                <li class="pricing-panel__benefit">Send up to ${sendingLimit}</li>
+                <li class="pricing-panel__benefit">
+                    ${userLimit} Users Allowed
+                </li>
+                <li class="pricing-panel__benefit">
+                    Send up to ${sendingLimit}
+                </li>
             </ul>
         
             <button class="button pricing-panel__button">Learn More</button>
@@ -26,4 +30,4 @@ class PricingPanel extends HTMLElement {
     }
 }
 
-customElements.define("pricing-panel", PricingPanel);
+customElements.define("pricing-panel", PricingPanel, { extends: "li" });

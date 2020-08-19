@@ -1,4 +1,4 @@
-var PACKAGES = (function() {
+var PACKAGES = (function () {
     var isMonthly = true;
     const packages = [
         {
@@ -7,7 +7,7 @@ var PACKAGES = (function() {
             priceYearly: "199.99",
             storage: "500 GB",
             userLimit: 2,
-            sendingLimit: "3 GB"
+            sendingLimit: "3 GB",
         },
         {
             name: "Professional",
@@ -15,7 +15,7 @@ var PACKAGES = (function() {
             priceYearly: "249.99",
             storage: "1 TB",
             userLimit: 5,
-            sendingLimit: "10 GB"
+            sendingLimit: "10 GB",
         },
         {
             name: "Master",
@@ -23,19 +23,19 @@ var PACKAGES = (function() {
             priceYearly: "399.99",
             storage: "2 TB",
             userLimit: 10,
-            sendingLimit: "20 GB"
-        }
+            sendingLimit: "20 GB",
+        },
     ];
     return {
-        getPackages: function() {
+        getPackages: function () {
             return packages;
         },
-        getIsMonthly: function() {
+        getIsMonthly: function () {
             return isMonthly;
         },
-        changeIsMonthly: function() {
+        changeIsMonthly: function () {
             isMonthly = !isMonthly;
-        }
+        },
     };
 })();
 
@@ -44,7 +44,7 @@ function changePriceDisplay() {
     const $toggle = $(".custom-toggle__toggle");
     let isMonthly = !PACKAGES.getIsMonthly();
 
-    packages.forEach(element => {
+    packages.forEach((element) => {
         let index = packages.indexOf(element);
         let pricingPanel = document.getElementById(`panel-${index}`);
         let panelPrice = pricingPanel.getElementsByClassName(
@@ -61,12 +61,12 @@ function changePriceDisplay() {
     PACKAGES.changeIsMonthly();
 }
 
-window.onload = function() {
+window.onload = function () {
     const $panelList = $("#panel-list");
     const $switchSpan = $("#switch-span");
     const packages = this.PACKAGES.getPackages();
 
-    packages.forEach(element => {
+    packages.forEach((element) => {
         let classMod = "";
         let index = packages.indexOf(element);
 
@@ -74,16 +74,17 @@ window.onload = function() {
             classMod = " pricing-panel--purple";
         }
 
-        $panelList.append(
-            `<pricing-panel class="pricing-panel${classMod}"  
-            id="panel-${index}"
-            name="${element.name}" 
-            price="${element.priceMonthly}" 
-            storage="${element.storage}" 
-            user-limit="${element.userLimit}" 
-            sending-limit="${element.sendingLimit}">
-            </pricing-panel>`
-        );
+        $panelList.append(`
+            <li is="pricing-panel"
+                class="pricing-panel${classMod}"  
+                id="panel-${index}"
+                data-name="${element.name}" 
+                data-price="${element.priceMonthly}" 
+                data-storage="${element.storage}" 
+                data-user="${element.userLimit}" 
+                data-sending="${element.sendingLimit}">
+                </li>
+        `);
     });
 
     $switchSpan.append(
