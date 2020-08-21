@@ -9,9 +9,7 @@ class PriceToggle extends HTMLButtonElement {
     connectedCallback() {
         this.innerHTML = `
             <span class="price-toggle__slider">
-                <span 
-                    class="price-toggle__toggle price-toggle__toggle--on"
-                ></span>
+                <span class="price-toggle__toggle"></span>
             </span>`;
     }
 }
