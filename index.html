@@ -10,8 +10,8 @@
             crossorigin="anonymous"
         ></script>
         <script src="./scripts/main.js"></script>
-        <script src="./components/pricing-panel.js"></script>
-        <script src="./components/custom-toggle.js"></script>
+        <script src="./scripts/components/pricing-panel.js"></script>
+        <script src="./scripts/components/price-toggle.js"></script>
 
         <link
             href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
@@ -32,7 +32,13 @@
             <div class="switch-container">
                 <h1>Our Pricing</h1>
                 <p>
-                    Annually<span id="switch-span" class="switch-span"></span
+                    Annually<span id="switch-span" class="switch-span">
+                        <price-toggle
+                            id="monthly-pricing-toggle"
+                            class="price-toggle"
+                            onclick="changePriceDisplay()"
+                        >
+                        </price-toggle></span
                     >Monthly
                 </p>
             </div>

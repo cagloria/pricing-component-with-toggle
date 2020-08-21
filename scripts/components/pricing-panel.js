@@ -1,3 +1,6 @@
+/**
+ * Pricing panel custom element extended from li.
+ */
 class PricingPanel extends HTMLLIElement {
     constructor() {
         super();

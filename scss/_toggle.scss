@@ -2,7 +2,7 @@ $primary-1: hsl(236, 72%, 79%);
 $primary-2: hsl(237, 63%, 64%);
 $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
 
-.custom-toggle {
+.price-toggle {
     width: fit-content;
     height: 30px;
     transition: 0.3s;

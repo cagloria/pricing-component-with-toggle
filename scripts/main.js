@@ -39,9 +39,12 @@ var PACKAGES = (function () {
     };
 })();
 
+/**
+ * Toggles the price display from monthly to yearly or vice versa.
+ */
 function changePriceDisplay() {
     const packages = PACKAGES.getPackages();
-    const $toggle = $(".custom-toggle__toggle");
+    const $toggle = $(".price-toggle__toggle");
     const isMonthly = !PACKAGES.getIsMonthly();
 
     packages.forEach((element) => {
@@ -53,13 +56,12 @@ function changePriceDisplay() {
             : element.priceYearly;
     });
 
-    $toggle.toggleClass("custom-toggle__toggle--on");
+    $toggle.toggleClass("price-toggle__toggle--on");
     PACKAGES.changeIsMonthly();
 }
 
 window.onload = function () {
     const $panelList = $("#panel-list");
-    const $switchSpan = $("#switch-span");
     const packages = this.PACKAGES.getPackages();
 
     packages.forEach((element) => {
@@ -77,12 +79,4 @@ window.onload = function () {
                 </li>
         `);
     });
-
-    $switchSpan.append(
-        `<custom-toggle 
-            id="monthly-pricing-toggle" 
-            class="custom-toggle" 
-            onclick="changePriceDisplay()">
-            </custom-toggle>`
-    );
 };
