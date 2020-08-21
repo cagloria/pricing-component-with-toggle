@@ -27,7 +27,10 @@ class PricingPanel extends HTMLLIElement {
                 <li>Send up to ${sendingLimit}</li>
             </ul>
             
-            <button class="button pricing-panel__button">Learn More</button>
+            <button
+                class="button pricing-panel__button"
+                aria-label="Learn more about our ${name} plan"
+            >Learn More</button>
         `;
     }
 }
