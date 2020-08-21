@@ -5,10 +5,11 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
 .price-toggle {
     width: fit-content;
     height: 30px;
+    padding: 0;
     transition: 0.3s;
+    border: 0;
     border-radius: 20px;
     &:hover {
-        cursor: pointer;
         opacity: 0.5;
     }
     &:focus {

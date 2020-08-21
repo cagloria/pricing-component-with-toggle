@@ -32,14 +32,15 @@
             <div class="switch-container">
                 <h1>Our Pricing</h1>
                 <p>
-                    Annually<span id="switch-span" class="switch-span">
-                        <price-toggle
-                            id="monthly-pricing-toggle"
-                            class="price-toggle"
-                            onclick="changePriceDisplay()"
-                        >
-                        </price-toggle></span
-                    >Monthly
+                    <span aria-hidden="true">Annually</span>
+                    <button
+                        is="price-toggle"
+                        id="price-toggle"
+                        class="price-toggle button"
+                        onclick="changePriceDisplay()"
+                        aria-label="Switch to annual prices"
+                    ></button>
+                    <span aria-hidden="true">Monthly</span>
                 </p>
             </div>
 

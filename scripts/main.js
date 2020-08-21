@@ -44,6 +44,7 @@ var PACKAGES = (function () {
  */
 function changePriceDisplay() {
     const packages = PACKAGES.getPackages();
+    const $priceToggle = $("#price-toggle");
     const $toggle = $(".price-toggle__toggle");
     const isMonthly = !PACKAGES.getIsMonthly();
 
@@ -56,6 +57,10 @@ function changePriceDisplay() {
             : element.priceYearly;
     });
 
+    $priceToggle.attr(
+        "aria-label",
+        isMonthly ? "Switch to annual prices" : "Switch to monthly prices"
+    );
     $toggle.toggleClass("price-toggle__toggle--on");
     PACKAGES.changeIsMonthly();
 }
