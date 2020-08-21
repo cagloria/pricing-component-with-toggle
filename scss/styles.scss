@@ -29,7 +29,11 @@ body {
 
 .switch-container {
     width: fit-content;
-    margin: 75px auto;
+    margin: 71px auto 62px;
+    h1 {
+        margin-bottom: 40px;
+    }
+
     p {
         font-size: 0.9em;
         font-weight: 700;
@@ -48,9 +52,10 @@ body {
 
 .panel-list {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    margin: 75px auto;
+    margin: 64px auto;
+    padding-left: 0;
     @media only screen and (max-width: 900px) {
         flex-direction: column;
     }

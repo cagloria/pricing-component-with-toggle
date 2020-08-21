@@ -2,7 +2,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 30px;
+  height: 32px;
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -24,8 +24,8 @@
 .price-toggle__slider {
   position: relative;
   display: inline-block;
-  width: 54px;
-  height: 30px;
+  width: 57px;
+  height: 100%;
   border-radius: 20px;
   background-color: #a3a8f0;
   background-image: linear-gradient(130deg, #a3a8f0 0%, #696fdd 100%);
@@ -33,8 +33,8 @@
 
 .price-toggle__toggle {
   position: absolute;
-  top: 3px;
-  left: 5px;
+  top: 4px;
+  left: 6px;
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -42,8 +42,8 @@
   transition: 0.3s;
   border-radius: 50%;
   background-color: #fff;
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
+  -webkit-transform: translateX(24px);
+          transform: translateX(24px);
 }
 
 .price-toggle--annually .price-toggle__toggle {
@@ -62,8 +62,12 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 300px;
-  padding: 10px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 350px;
+  height: 454px;
+  margin-top: 25px;
+  padding: 0 30px;
   text-align: center;
   color: #494c5f;
   border-radius: 10px;
@@ -72,13 +76,10 @@
           box-shadow: 1px 1px 20px 13px rgba(185, 186, 187, 0.2);
 }
 
-.pricing-panel > * {
-  width: 100%;
-}
-
 .pricing-panel__title {
-  font-size: 1.2em;
+  font-size: 1.12em;
   font-weight: 700;
+  margin-top: 13px;
 }
 
 .pricing-panel__price {
@@ -93,7 +94,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 5px 0;
+  margin: 1px 0;
+  letter-spacing: -0.04em;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -109,23 +111,24 @@
 }
 
 .pricing-panel__price-dollar {
-  font-size: 0.6em;
+  font-size: 0.5em;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-right: 5px;
+  margin-right: 12px;
 }
 
 .pricing-panel__benefits {
-  margin: 25px 0;
+  margin: 23px 0 19px;
   padding-left: 0;
   list-style-type: none;
+  letter-spacing: -0.03em;
   color: #6d708d;
 }
 
 .pricing-panel__benefits li {
   font-weight: bold;
-  padding: 15px 0;
+  padding: 17px 0;
   border-top: 1px solid #b3b5c6;
 }
 
@@ -172,7 +175,8 @@
 }
 
 .pricing-panel:nth-of-type(even) {
-  padding: 40px 40px;
+  height: 500px;
+  margin-top: 0;
   color: #f6f6fe;
   background-color: #696fdd;
   background-image: linear-gradient(130deg, #a3a8f0 0%, #696fdd 100%);
@@ -255,7 +259,11 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 75px auto;
+  margin: 71px auto 62px;
+}
+
+.switch-container h1 {
+  margin-bottom: 40px;
 }
 
 .switch-container p {
@@ -287,13 +295,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 75px auto;
+  margin: 64px auto;
+  padding-left: 0;
 }
 
 @media only screen and (max-width: 900px) {

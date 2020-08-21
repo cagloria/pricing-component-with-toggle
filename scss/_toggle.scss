@@ -4,7 +4,7 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
 
 .price-toggle {
     width: fit-content;
-    height: 30px;
+    height: 32px;
     padding: 0;
     transition: 0.3s;
     border: 0;
@@ -20,23 +20,23 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
     &__slider {
         position: relative;
         display: inline-block;
-        width: 54px;
-        height: 30px;
+        width: 57px;
+        height: 100%;
         border-radius: 20px;
         background-color: $primary-1;
         background-image: $primary-gradient;
     }
     &__toggle {
         position: absolute;
-        top: 3px;
-        left: 5px;
+        top: 4px;
+        left: 6px;
         display: inline-block;
         width: 24px;
         height: 24px;
         transition: 0.3s;
         border-radius: 50%;
         background-color: #fff;
-        transform: translateX(20px);
+        transform: translateX(24px);
     }
     &--annually {
         .price-toggle__toggle {
