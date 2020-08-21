@@ -62,8 +62,11 @@
   width: 300px;
   padding: 10px 40px;
   text-align: center;
+  color: #494c5f;
   border-radius: 10px;
   background-color: #fff;
+  -webkit-box-shadow: 1px 1px 20px 13px rgba(185, 186, 187, 0.2);
+          box-shadow: 1px 1px 20px 13px rgba(185, 186, 187, 0.2);
 }
 
 .pricing-panel > * {
@@ -73,7 +76,6 @@
 .pricing-panel__title {
   font-size: 1.2em;
   font-weight: 700;
-  color: #6d708d;
 }
 
 .pricing-panel__price {
@@ -89,7 +91,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 5px 0;
-  color: #494c5f;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -112,27 +113,27 @@
   margin-right: 5px;
 }
 
-.pricing-panel__benefits-ul {
+.pricing-panel__benefits {
   margin: 25px 0;
   padding-left: 0;
   list-style-type: none;
+  color: #6d708d;
 }
 
-@media only screen and (max-width: 900px) {
-  .pricing-panel__benefits-ul {
-    margin: 20px 0;
-  }
-}
-
-.pricing-panel__benefit {
+.pricing-panel__benefits li {
   font-weight: bold;
   padding: 15px 0;
-  color: #6d708d;
   border-top: 1px solid #b3b5c6;
 }
 
-.pricing-panel__benefit:last-of-type {
+.pricing-panel__benefits li:last-of-type {
   border-bottom: 1px solid #b3b5c6;
+}
+
+@media only screen and (max-width: 900px) {
+  .pricing-panel__benefits {
+    margin: 20px 0;
+  }
 }
 
 .pricing-panel__button {
@@ -140,16 +141,17 @@
   height: 45px;
   margin: 10px 0;
   text-transform: uppercase;
-  color: #fff;
+  color: #f6f6fe;
   border: none;
+  border: 1px solid transparent;
   border-radius: 10px;
-  background-color: #a3a8f0;
+  background-color: #696fdd;
   background-image: linear-gradient(130deg, #a3a8f0 0%, #696fdd 100%);
 }
 
 .pricing-panel__button:hover {
   color: #696fdd;
-  border: 1px solid #a3a8f0;
+  border-color: #696fdd;
   background-color: transparent;
   background-image: none;
 }
@@ -168,33 +170,32 @@
 
 .pricing-panel:nth-of-type(even) {
   padding: 40px 40px;
-  background-color: #a3a8f0;
+  color: #f6f6fe;
+  background-color: #696fdd;
   background-image: linear-gradient(130deg, #a3a8f0 0%, #696fdd 100%);
 }
 
-.pricing-panel:nth-of-type(even) .pricing-panel__title,
-.pricing-panel:nth-of-type(even) .pricing-panel__price,
-.pricing-panel:nth-of-type(even) .pricing-panel__benefit {
-  color: #fff;
+.pricing-panel:nth-of-type(even) .pricing-panel__benefits {
+  color: #f6f6fe;
 }
 
 .pricing-panel:nth-of-type(even) .pricing-panel__button {
   color: #696fdd;
-  background-color: #fff;
+  background-color: #f6f6fe;
   background-image: none;
 }
 
 .pricing-panel:nth-of-type(even) .pricing-panel__button:hover {
-  color: #fff;
-  border: 1px solid #fff;
+  color: #f6f6fe;
+  border: 1px solid #f6f6fe;
+  border-color: #f6f6fe;
   background-color: transparent;
-  background-image: none;
 }
 
 .pricing-panel:nth-of-type(even) .pricing-panel__button:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 4px #b3b5c6;
-          box-shadow: 0 0 0 4px #b3b5c6;
+  -webkit-box-shadow: 0 0 0 4px #a3a8f0;
+          box-shadow: 0 0 0 4px #a3a8f0;
 }
 
 @media only screen and (max-width: 900px) {

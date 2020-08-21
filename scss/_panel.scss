@@ -1,8 +1,10 @@
 $primary-1: hsl(236, 72%, 79%);
 $primary-2: hsl(237, 63%, 64%);
-$light-2: hsl(234, 14%, 74%);
-$neutral: hsl(233, 13%, 49%);
-$dark: hsl(232, 13%, 33%);
+$neutral-1: #fff;
+$neutral-2: hsl(240, 78%, 98%);
+$neutral-3: hsl(234, 14%, 74%);
+$neutral-4: hsl(233, 13%, 49%);
+$neutral-5: hsl(232, 13%, 33%);
 $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
 
 .pricing-panel {
@@ -12,8 +14,10 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
     width: 300px;
     padding: 10px 40px;
     text-align: center;
+    color: $neutral-5;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: $neutral-1;
+    box-shadow: 1px 1px 20px 13px hsla(236, 1%, 73%, 0.2);
     > * {
         width: 100%;
     }
@@ -21,7 +25,6 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
     &__title {
         font-size: 1.2em;
         font-weight: 700;
-        color: $neutral;
     }
 
     &__price {
@@ -31,7 +34,6 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
         align-items: center;
         justify-content: center;
         margin: 5px 0;
-        color: $dark;
         @media only screen and (max-width: 1200px) {
             font-size: 3.5em;
         }
@@ -47,22 +49,21 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
         margin-right: 5px;
     }
 
-    &__benefits-ul {
+    &__benefits {
         margin: 25px 0;
         padding-left: 0;
         list-style-type: none;
+        color: $neutral-4;
+        li {
+            font-weight: bold;
+            padding: 15px 0;
+            border-top: 1px solid $neutral-3;
+            &:last-of-type {
+                border-bottom: 1px solid $neutral-3;
+            }
+        }
         @media only screen and (max-width: 900px) {
             margin: 20px 0;
-        }
-    }
-
-    &__benefit {
-        font-weight: bold;
-        padding: 15px 0;
-        color: $neutral;
-        border-top: 1px solid $light-2;
-        &:last-of-type {
-            border-bottom: 1px solid $light-2;
         }
     }
 
@@ -71,14 +72,15 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
         height: 45px;
         margin: 10px 0;
         text-transform: uppercase;
-        color: #fff;
+        color: $neutral-2;
         border: none;
+        border: 1px solid transparent;
         border-radius: 10px;
-        background-color: $primary-1;
+        background-color: $primary-2;
         background-image: $primary-gradient;
         &:hover {
             color: $primary-2;
-            border: 1px solid $primary-1;
+            border-color: $primary-2;
             background-color: transparent;
             background-image: none;
         }
@@ -95,28 +97,27 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
 
     &:nth-of-type(even) {
         padding: 40px 40px;
-        background-color: $primary-1;
+        color: $neutral-2;
+        background-color: $primary-2;
         background-image: $primary-gradient;
-        .pricing-panel__title,
-        .pricing-panel__price,
-        .pricing-panel__benefit {
-            color: #fff;
+        .pricing-panel__benefits {
+            color: $neutral-2;
         }
 
         .pricing-panel__button {
             color: $primary-2;
-            background-color: #fff;
+            background-color: $neutral-2;
             background-image: none;
             &:hover {
-                color: #fff;
-                border: 1px solid #fff;
+                color: $neutral-2;
+                border: 1px solid $neutral-2;
+                border-color: $neutral-2;
                 background-color: transparent;
-                background-image: none;
             }
 
             &:focus {
                 outline: none;
-                box-shadow: 0 0 0 4px $light-2;
+                box-shadow: 0 0 0 4px $primary-1;
             }
         }
 
