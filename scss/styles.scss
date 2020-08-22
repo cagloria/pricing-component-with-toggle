@@ -21,7 +21,7 @@ body {
         url("../images/bg-bottom.svg");
     background-repeat: no-repeat;
     background-position: top right, bottom left;
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 768px) {
         background-image: url("../images/bg-top.svg");
         background-position: top -6px right -154px;
     }
@@ -42,11 +42,14 @@ body {
         justify-content: space-between;
         width: 240px;
         color: $light-2;
+        @media only screen and (max-width: 320px) {
+            font-size: 0.8em;
+            width: 100%;
+        }
     }
 
-    @media only screen and (max-width: 900px) {
-        width: fit-content;
-        margin: 75px auto;
+    @media only screen and (max-width: 1024px) {
+        margin: 64px auto;
     }
 }
 
@@ -56,8 +59,10 @@ body {
     justify-content: center;
     margin: 64px auto;
     padding-left: 0;
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1024px) {
+        align-items: center;
         flex-direction: column;
+        margin-top: 79px;
     }
 }
 

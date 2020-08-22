@@ -64,7 +64,8 @@
           justify-content: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 350px;
+  width: 24.5vw;
+  max-width: 350px;
   height: 454px;
   margin-top: 25px;
   padding: 0 30px;
@@ -98,15 +99,15 @@
   letter-spacing: -0.04em;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
   .pricing-panel__price {
     font-size: 3.5em;
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 320px) {
   .pricing-panel__price {
-    font-size: 4em;
+    font-size: 3.5em;
   }
 }
 
@@ -136,12 +137,6 @@
   border-bottom: 1px solid #b3b5c6;
 }
 
-@media only screen and (max-width: 900px) {
-  .pricing-panel__benefits {
-    margin: 20px 0;
-  }
-}
-
 .pricing-panel__button {
   font-weight: bold;
   height: 45px;
@@ -166,12 +161,6 @@
   outline: none;
   -webkit-box-shadow: 0 0 0 4px #696fdd;
           box-shadow: 0 0 0 4px #696fdd;
-}
-
-@media only screen and (max-width: 900px) {
-  .pricing-panel__button {
-    margin-bottom: 20px;
-  }
 }
 
 .pricing-panel:nth-of-type(even) {
@@ -205,33 +194,20 @@
           box-shadow: 0 0 0 4px #a3a8f0;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1024px) {
   .pricing-panel:nth-of-type(even) {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: 454px;
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
   .pricing-panel {
-    width: 200px;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .pricing-panel {
-    width: 250px;
-    margin-bottom: 30px;
-    padding: 10px 30px;
+    width: 87vw;
+    margin-top: 0;
+    margin-bottom: 32px;
   }
   .pricing-panel:last-of-type {
     margin-bottom: 0;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .pricing-panel {
-    width: 200px;
   }
 }
 
@@ -248,7 +224,7 @@ body {
   background-position: top right, bottom left;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
   body {
     background-image: url("../images/bg-top.svg");
     background-position: top -6px right -154px;
@@ -282,12 +258,16 @@ body {
   color: #b3b5c6;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 320px) {
+  .switch-container p {
+    font-size: 0.8em;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
   .switch-container {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 75px auto;
+    margin: 64px auto;
   }
 }
 
@@ -305,12 +285,16 @@ body {
   padding-left: 0;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1024px) {
   .panel-list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 79px;
   }
 }
 
