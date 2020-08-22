@@ -44,7 +44,20 @@ body {
         color: $light-2;
         @media only screen and (max-width: 320px) {
             font-size: 0.8em;
+            flex-direction: column;
             width: 100%;
+            span:first-child {
+                align-self: flex-start;
+            }
+
+            span:first-child,
+            .price-toggle {
+                margin-bottom: 10px;
+            }
+
+            span:last-child {
+                align-self: flex-end;
+            }
         }
     }
 
@@ -71,6 +84,9 @@ h1 {
     font-weight: 800;
     text-align: center;
     color: $neutral;
+    @media only screen and (max-width: 320px) {
+        font-size: 1.5em;
+    }
 }
 
 .button {

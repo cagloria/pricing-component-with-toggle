@@ -107,7 +107,13 @@
 
 @media only screen and (max-width: 320px) {
   .pricing-panel__price {
-    font-size: 3.5em;
+    font-size: 3.2em;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .pricing-panel__price {
+    font-size: 2.5em;
   }
 }
 
@@ -137,6 +143,12 @@
   border-bottom: 1px solid #b3b5c6;
 }
 
+@media only screen and (max-width: 250px) {
+  .pricing-panel__benefits {
+    font-size: 0.8em;
+  }
+}
+
 .pricing-panel__button {
   font-weight: bold;
   height: 45px;
@@ -161,6 +173,12 @@
   outline: none;
   -webkit-box-shadow: 0 0 0 4px #696fdd;
           box-shadow: 0 0 0 4px #696fdd;
+}
+
+@media only screen and (max-width: 250px) {
+  .pricing-panel__button {
+    font-size: 0.8em;
+  }
 }
 
 .pricing-panel:nth-of-type(even) {
@@ -208,6 +226,13 @@
   }
   .pricing-panel:last-of-type {
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .pricing-panel {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -261,7 +286,23 @@ body {
 @media only screen and (max-width: 320px) {
   .switch-container p {
     font-size: 0.8em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
+  }
+  .switch-container p span:first-child {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .switch-container p span:first-child,
+  .switch-container p .price-toggle {
+    margin-bottom: 10px;
+  }
+  .switch-container p span:last-child {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 
@@ -303,6 +344,12 @@ h1 {
   font-weight: 800;
   text-align: center;
   color: #6d708d;
+}
+
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.5em;
+  }
 }
 
 .button {

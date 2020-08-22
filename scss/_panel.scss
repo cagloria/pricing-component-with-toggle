@@ -41,7 +41,11 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
         }
 
         @media only screen and (max-width: 320px) {
-            font-size: 3.5em;
+            font-size: 3.2em;
+        }
+
+        @media only screen and (max-width: 250px) {
+            font-size: 2.5em;
         }
     }
 
@@ -64,6 +68,10 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
             &:last-of-type {
                 border-bottom: 1px solid $neutral-3;
             }
+        }
+
+        @media only screen and (max-width: 250px) {
+            font-size: 0.8em;
         }
     }
 
@@ -88,6 +96,10 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
         &:focus {
             outline: none;
             box-shadow: 0 0 0 4px $primary-2;
+        }
+
+        @media only screen and (max-width: 250px) {
+            font-size: 0.8em;
         }
     }
 
@@ -130,5 +142,10 @@ $primary-gradient: linear-gradient(130deg, $primary-1 0%, $primary-2 100%);
         &:last-of-type {
             margin-bottom: 0;
         }
+    }
+
+    @media only screen and (max-width: 320px) {
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }
